@@ -22,7 +22,7 @@ namespace prim_szamok
 
             List<int> listOfPrimes = new List<int>();
             Console.WriteLine("Prím számok {0}-ig: ", maxNumber);
-            for (int i = 0; i <= maxNumber; i++)
+            for (int i = 2; i <= maxNumber; i++)
             {
                 if (isPrime(i))
                 {
@@ -44,10 +44,7 @@ namespace prim_szamok
 
         private static bool isPrime(int number)
         {
-            if (number <= 1)
-            {
-                return false;
-            }
+           
             for (int i = 2; i <= Math.Sqrt(number); i++)
             {
                 if (number % i == 0) 
